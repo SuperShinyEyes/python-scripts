@@ -23,7 +23,7 @@ def getNameForFileWrite(fileRead):
     if len(fileReadSplitted) == 2:
         return fileReadSplitted[0] + "-80ed." + fileReadSplitted[-1]
     else:
-        return fileReadSplitted[0] + "-80ed"
+        return fileRead + "-80ed"
 
 def fileReadGenerator(fileRead):
     with open(fileRead) as f:
@@ -60,4 +60,4 @@ def perform80Liner(fileRead):
                 writeLineToFile(f, line)
 
 if __name__ == "__main__":
-    perform80Liner("text")
+    perform80Liner("ignored/text")
